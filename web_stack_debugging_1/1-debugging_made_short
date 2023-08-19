@@ -1,5 +1,6 @@
 #!/bin/bash
-if ! service nginx status | grep -q "active (running)"; then
+# Configures an Nginx server to listen on port 80.
+if ! service nginx status | grep -q "active (running)" then
     echo "nginx is not running"
 fi
 
