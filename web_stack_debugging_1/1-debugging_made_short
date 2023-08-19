@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Command to make an nginx server listen on port 80, shorter version
-echo " * nginx is not running"
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 response=$(curl -Is http://localhost:80 | head -n 1)
 
