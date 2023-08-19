@@ -1,6 +1,5 @@
-#!/usr/bin/env bash
-# Configures an Nginx server to listen on port 80.
+#!/bin/bash
+if ! service nginx status | grep -q "active (running)"; then
+    echo "nginx is not running"
+fi
 
-rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
